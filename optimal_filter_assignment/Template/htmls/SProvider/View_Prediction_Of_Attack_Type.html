@@ -1,0 +1,113 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Attack Type Prediction Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">RID</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">ip_src</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">ip_dst</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tcp_srcport</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tcp_dstport</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tcp_flags_push</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tcp_flags_ack</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tcp_ack</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">frame_time</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">packets_bytes</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tx_packets</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">tx_bytes</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">rx_packets</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">rx_bytes</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                         <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.RID}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.ip_src}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.ip_dst}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tcp_srcport}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tcp_dstport}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tcp_flags_push}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tcp_flags_ack}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tcp_ack}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.frame_time}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.packets_bytes}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tx_packets}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.tx_bytes}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.rx_packets}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.rx_bytes}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

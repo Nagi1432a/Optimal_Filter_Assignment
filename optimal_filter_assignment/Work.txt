@@ -1,0 +1,35 @@
+Optimal Filter Assignment Policy Against Distributed Denial of Service Attack
+
+botnet, DDoS defense, DDoS, flooding attack, filter router, network security, filter assignment
+
+Optimal_Filter_Assignment
+
+
+optimal_filter_assignment
+
+
+Members
+--------
+
+RID	
+ip_src	
+ip_dst	
+tcp_srcport	
+tcp_dstport	
+tcp_flags_push	
+tcp_flags_ack	
+tcp_ack	
+frame_time	
+packets_bytes	
+tx_packets	
+tx_bytes	
+rx_packets	
+rx_bytes
+Prediction
+
+
+predict_attack_type
+
+
+
+
